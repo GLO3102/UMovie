@@ -3,7 +3,6 @@
 Movie API pour le cours GLO-3102.
 
 
-
 ## UMovie hébergé
 
 À venir.
