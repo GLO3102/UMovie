@@ -14,7 +14,7 @@ exports.searchMovie = function (req, res) {
         term: req.query.q,
         media: 'movie',
         entity: 'movie',
-        genreId: req.query.genre || '', //TODO vseguin : add a way to translate the genre.
+        genreId: req.query.genre || '',
         limit: req.query.limit || 10
     }, res);
 };

@@ -13,7 +13,6 @@ exports.lookup = function (parameters, res, amount) {
 };
 
 function queryItunesApi(url, res, amount) {
-    console.log(url);
     request({
             uri: url,
             method: 'GET'

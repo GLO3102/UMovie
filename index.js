@@ -12,6 +12,7 @@ var mongoUri = process.env.MONGOLAB_URI || 'mongodb://localhost/ubeat';
 mongoose.connect(mongoUri);
 
 var authentication = require('./middleware/authentication');
+var genres = require('./routes/genres');
 var login = require('./routes/login');
 var search = require('./routes/search');
 var signup = require('./routes/signup');
@@ -60,7 +61,8 @@ app.get('/tokenInfo', authentication.isAuthenticated, login.getToken);
 
 // Secure API
 
-// TODO vseguin : add a way to get all genres
+app.get('/genres', authentication.isAuthenticated, genres.getAllGenres);
+
 app.get('/search', authentication.isAuthenticated, search.search);
 app.get('/search/actors', authentication.isAuthenticated, search.searchActor);
 app.get('/search/movies', authentication.isAuthenticated, search.searchMovie);
