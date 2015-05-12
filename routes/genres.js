@@ -1,25 +1,34 @@
 var request = require('request');
 
-exports.getAllGenres = function (req, res) {
+exports.getMoviesGenres = function (req, res) {
+    getGenres(req, res, '33');
+};
+
+exports.getTvShowsGenres = function (req, res) {
+    getGenres(req, res, '32');
+};
+
+function getGenres(req, res, entityCode) {
     request({
             uri: 'https://itunes.apple.com/WebObjects/MZStoreServices.woa/ws/genres',
             method: 'GET'
         },
         function (error, response, body) {
             if (!error && response.statusCode === 200) {
-                successCallback(res, JSON.parse(body));
+                successCallback(res, JSON.parse(body), entityCode);
             } else {
                 errorCallback(res, error, response, body);
             }
         }
     );
-};
+}
 
-function successCallback(res, body) {
+function successCallback(res, body, entityCode) {
     // 33 corresponds to the movie entity.
     var genres = [];
-    for (var subgenre in body['33']['subgenres']) {
-        var genre = body['33']['subgenres'][subgenre];
+    var subgenres = body[entityCode]['subgenres'];
+    for (var subgenre in subgenres) {
+        var genre = subgenres[subgenre];
         genres.push({id: genre['id'], name: genre['name']})
     }
     res.status(200).send(genres);

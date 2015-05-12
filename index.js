@@ -61,7 +61,8 @@ app.get('/tokenInfo', authentication.isAuthenticated, login.getToken);
 
 // Secure API
 
-app.get('/genres', authentication.isAuthenticated, genres.getAllGenres);
+app.get('/genres/movies', authentication.isAuthenticated, genres.getMoviesGenres);
+app.get('/genres/tvshows', authentication.isAuthenticated, genres.getTvShowsGenres);
 
 app.get('/search', authentication.isAuthenticated, search.search);
 app.get('/search/actors', authentication.isAuthenticated, search.searchActor);
