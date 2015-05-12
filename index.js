@@ -13,6 +13,7 @@ mongoose.connect(mongoUri);
 
 var authentication = require('./middleware/authentication');
 var login = require('./routes/login');
+var search = require('./routes/search');
 var signup = require('./routes/signup');
 var status = require('./routes/status');
 var user = require('./routes/user');
@@ -56,6 +57,22 @@ app.get('/welcome', signup.welcome);
 
 app.get('/token', login.getToken);
 app.get('/tokenInfo', authentication.isAuthenticated, login.getToken);
+
+// Secure API
+
+// TODO vseguin : add a way to get all genres
+app.get('/search', authentication.isAuthenticated, search.search);
+app.get('/search/actors', authentication.isAuthenticated, search.searchActor);
+app.get('/search/movies', authentication.isAuthenticated, search.searchMovie);
+app.get('/search/tvshowepisode', authentication.isAuthenticated, search.searchTvShowEpisode);
+app.get('/search/tvshowseason', authentication.isAuthenticated, search.searchTvShowSeason);
+app.get('/search/users', authentication.isAuthenticated, user.findByName);
+
+app.get('/users', authentication.isAuthenticated, user.allUsers);
+app.get('/users/:id', authentication.isAuthenticated, user.findById);
+
+app.post('/follow', authentication.isAuthenticated, user.follow);
+app.delete('/follow/:id', authentication.isAuthenticated, user.unfollow);
 
 var port = process.env.PORT || 3000;
 app.listen(port);

@@ -72,7 +72,7 @@ module.exports = function (passport, app) {
                         }
 
                         if (user) {
-                            return done(null, false);
+                            return done("The user with email " + email + " already exists and could not be created.");
                         } else {
                             var newUser = new User();
 
