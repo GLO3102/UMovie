@@ -31,10 +31,10 @@ exports.searchTvShowEpisode = function (req, res) {
 
 exports.searchTvShowSeason = function (req, res) {
     itunes.search({
-        attribute : 'tvSeasonTerm',
         term: req.query.q,
         media: 'tvShow',
         entity: 'tvSeason',
+        genreId: req.query.genre || '',
         limit: req.query.limit || 10
     }, res);
 };
