@@ -14,6 +14,7 @@ mongoose.connect(mongoUri);
 var authentication = require('./middleware/authentication');
 var genres = require('./routes/genres');
 var login = require('./routes/login');
+var lookup = require('./routes/lookup');
 var search = require('./routes/search');
 var signup = require('./routes/signup');
 var status = require('./routes/status');
@@ -67,8 +68,8 @@ app.get('/genres/tvshows', authentication.isAuthenticated, genres.getTvShowsGenr
 app.get('/search', authentication.isAuthenticated, search.search);
 app.get('/search/actors', authentication.isAuthenticated, search.searchActor);
 app.get('/search/movies', authentication.isAuthenticated, search.searchMovie);
-app.get('/search/tvshowepisode', authentication.isAuthenticated, search.searchTvShowEpisode);
-app.get('/search/tvshowseason', authentication.isAuthenticated, search.searchTvShowSeason);
+app.get('/search/tvshows/episodes', authentication.isAuthenticated, search.searchTvShowEpisode);
+app.get('/search/tvshows/seasons', authentication.isAuthenticated, search.searchTvShowSeason);
 app.get('/search/users', authentication.isAuthenticated, user.findByName);
 
 app.get('/users', authentication.isAuthenticated, user.allUsers);
@@ -76,6 +77,14 @@ app.get('/users/:id', authentication.isAuthenticated, user.findById);
 
 app.post('/follow', authentication.isAuthenticated, user.follow);
 app.delete('/follow/:id', authentication.isAuthenticated, user.unfollow);
+
+app.get('/actors/:id', authentication.isAuthenticated, lookup.getActor);
+app.get('/actors/:id/movies', authentication.isAuthenticated, lookup.getActorMovies);
+app.get('/movies/:id', authentication.isAuthenticated, lookup.getMovie);
+app.get('/tvshows/season/:id', authentication.isAuthenticated, lookup.getTvShowSeason);
+app.get('/tvshows/season/:id/episodes', authentication.isAuthenticated, lookup.getTvShowEpisodes);
+
+// TODO vseguin: Add unsecure API here.
 
 var port = process.env.PORT || 3000;
 app.listen(port);
