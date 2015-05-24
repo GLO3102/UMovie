@@ -19,6 +19,7 @@ var search = require('./routes/search');
 var signup = require('./routes/signup');
 var status = require('./routes/status');
 var user = require('./routes/user');
+var watchlist = require('./routes/watchlists');
 
 var app = express();
 var corsOptions = {
@@ -83,6 +84,14 @@ app.get('/actors/:id/movies', authentication.isAuthenticated, lookup.getActorMov
 app.get('/movies/:id', authentication.isAuthenticated, lookup.getMovie);
 app.get('/tvshows/season/:id', authentication.isAuthenticated, lookup.getTvShowSeason);
 app.get('/tvshows/season/:id/episodes', authentication.isAuthenticated, lookup.getTvShowEpisodes);
+
+app.get('/watchlists', authentication.isAuthenticated, watchlist.getWatchlists);
+app.post('/watchlists', authentication.isAuthenticated, watchlist.createWatchlist);
+app.get('/watchlists/:id', authentication.isAuthenticated, watchlist.getWatchlistById);
+app.post('/watchlists/:id/movies', authentication.isAuthenticated, watchlist.addMovieToWatchlist);
+app.delete('/watchlists/:id/movies/:trackId', authentication.isAuthenticated, watchlist.removeMovieFromWatchlist);
+app.put('/watchlists/:id', authentication.isAuthenticated, watchlist.updateWatchlist);
+app.delete('/watchlists/:id', authentication.isAuthenticated, watchlist.removeWatchlist);
 
 // TODO vseguin: Add unsecure API here.
 
