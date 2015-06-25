@@ -13,7 +13,7 @@ exports.isAuthenticated = function (req, res, next) {
                 return res.status(401).send({
                     errorCode: 'ACCESS_DENIED',
                     message: 'Access token is expired'
-                }).end();
+                });
             }
 
             UserModel.findOne({ '_id': decoded.iss }, function (err, user) {
@@ -25,7 +25,7 @@ exports.isAuthenticated = function (req, res, next) {
                         return res.status(401).send({
                             errorCode: 'ACCESS_DENIED',
                             message: 'User associated with token was not found'
-                        }).end();
+                        });
                     }
                 }
             });
@@ -33,14 +33,14 @@ exports.isAuthenticated = function (req, res, next) {
             return res.status(401).send({
                 errorCode: 'ACCESS_DENIED',
                 message: 'Error retrieving user associated with token'
-            }).end();
+            });
         }
 
     } else {
         return res.status(401).send({
             errorCode: 'ACCESS_DENIED',
             message: 'Access token is missing'
-        }).end();
+        });
     }
 };
 
