@@ -93,7 +93,37 @@ app.delete('/watchlists/:id/movies/:trackId', authentication.isAuthenticated, wa
 app.put('/watchlists/:id', authentication.isAuthenticated, watchlist.updateWatchlist);
 app.delete('/watchlists/:id', authentication.isAuthenticated, watchlist.removeWatchlist);
 
-// TODO vseguin: Add unsecure API here.
+// Unsecure API. Useful for the second release.
+
+app.get('/unsecure/genres/movies', genres.getMoviesGenres);
+app.get('/unsecure/genres/tvshows', genres.getTvShowsGenres);
+
+app.get('/unsecure/search', search.search);
+app.get('/unsecure/search/actors', search.searchActor);
+app.get('/unsecure/search/movies', search.searchMovie);
+app.get('/unsecure/search/tvshows/episodes', search.searchTvShowEpisode);
+app.get('/unsecure/search/tvshows/seasons', search.searchTvShowSeason);
+app.get('/unsecure/search/users', user.findByName);
+
+app.get('/unsecure/users', user.allUsers);
+app.get('/unsecure/users/:id', user.findById);
+
+app.post('/unsecure/follow', user.follow);
+app.delete('/unsecure/follow/:id', user.unfollow);
+
+app.get('/unsecure/actors/:id', lookup.getActor);
+app.get('/unsecure/actors/:id/movies', lookup.getActorMovies);
+app.get('/unsecure/movies/:id', lookup.getMovie);
+app.get('/unsecure/tvshows/season/:id', lookup.getTvShowSeason);
+app.get('/unsecure/tvshows/season/:id/episodes', lookup.getTvShowEpisodes);
+
+app.get('/unsecure/watchlists', watchlist.getWatchlists);
+app.post('/unsecure/watchlists', watchlist.createWatchlistUnsecure);
+app.get('/unsecure/watchlists/:id', watchlist.getWatchlistById);
+app.post('/unsecure/watchlists/:id/movies', watchlist.addMovieToWatchlist);
+app.delete('/unsecure/watchlists/:id/movies/:trackId', watchlist.removeMovieFromWatchlist);
+app.put('/unsecure/watchlists/:id', watchlist.updateWatchlist);
+app.delete('/unsecure/watchlists/:id', watchlist.removeWatchlistUnsecure);
 
 var port = process.env.PORT || 3000;
 app.listen(port);

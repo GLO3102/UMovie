@@ -47,6 +47,20 @@ exports.createWatchlist = function (req, res) {
     });
 };
 
+exports.createWatchlistUnsecure = function (req, res) {
+    var watchlist = new Watchlist({
+        name: req.body.name,
+        owner: req.body.owner
+    });
+    watchlist.save(function (err) {
+        if (!err) {
+            res.status(201).send(watchlist);
+        } else {
+            console.error(err);
+        }
+    });
+};
+
 exports.getWatchlists = function (req, res) {
     Watchlist.find({}, function (err, watchlists) {
         if (!err) {
@@ -115,6 +129,23 @@ exports.removeWatchlist = function (req, res) {
                         message: 'Watchlist can only be deleted by its owner.'
                     });
                 }
+            } else {
+                sendWatchlistNotFoundError(res, req);
+            }
+        } else {
+            handleFindByIdError(err,res,req);
+        }
+    });
+};
+
+exports.removeWatchlistUnsecure = function (req, res) {
+    Watchlist.findById(req.params.id, function (err, watchlist) {
+        if (!err) {
+            if (watchlist) {
+                watchlist.remove();
+                res.status(200).send({
+                    message: 'Watchlist ' + req.params.id + ' deleted successfully.'
+                });
             } else {
                 sendWatchlistNotFoundError(res, req);
             }
