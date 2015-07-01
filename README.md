@@ -1,11 +1,18 @@
+<a href="https://www.statuscake.com" title="Website Uptime Monitoring"><img src="https://www.statuscake.com/App/button/index.php?Track=bggF7iyFwd&Days=1&Design=3" /></a>
+
 #UMovie
 
 Movie API pour le cours GLO-3102.
 
-
 ## UMovie hébergé
 
 UMovie est disponible en version hébergée sur [umovie.herokuapp.com](https://umovie.herokuapp.com/).
+
+## Avant d'envoyer un mail de panique : 
+Est-ce que l'API est _down_ ? : Voir le [statut ici](http://uptime.statuscake.com/?TestID=58ArsNGh0S).
+Si le statut est _down_ : nous avons déja été notifié. Nous tenterons de garder l'API _up_ le plus possible. Gardez en tête que vous pouvez rouler l'API en version locale très facilement.
+
+En cas de problème persistant, contactez les enseignants par courriel.
 
 ##Exécuter UMovie localement
 
