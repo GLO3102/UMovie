@@ -5,7 +5,7 @@ Movie API pour le cours GLO-3102.
 
 ## UMovie hébergé
 
-À venir.
+UMovie est disponible en version hébergée sur [umovie.herokuapp.com](https://umovie.herokuapp.com/).
 
 ##Exécuter UMovie localement
 
