@@ -1,3 +1,5 @@
+[![Dependency Status](https://david-dm.org/glo3102/umovie.svg)](https://david-dm.org/GLO3102/Umovie)
+[![Code Climate](https://codeclimate.com/github/wfortin/UMovie.png)](https://codeclimate.com/github/wfortin/UMovie)
 <a href="https://www.statuscake.com" title="Website Uptime Monitoring"><img src="https://www.statuscake.com/App/button/index.php?Track=bggF7iyFwd&Days=1&Design=3" /></a>
 
 #UMovie
