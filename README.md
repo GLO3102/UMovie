@@ -4,6 +4,8 @@
 
 #UMovie
 
+[![Join the chat at https://gitter.im/GLO3102/UMovie](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/GLO3102/UMovie?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Movie API pour le cours GLO-3102.
 
 ## UMovie hébergé
