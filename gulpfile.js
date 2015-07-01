@@ -25,11 +25,6 @@ gulp.task('watch', function () {
     gulp.watch(paths.server, ['server']);
 });
 
-gulp.task('hook', function () {
-    return gulp.src('.pre-commit')
-        .pipe(symlink('.git/hooks/', 'pre-commit'));
-});
-
 gulp.task('default', function () {
     runSequence('server', 'watch');
 });
