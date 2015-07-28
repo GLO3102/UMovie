@@ -2,7 +2,7 @@
 
 Le projet de session consiste à développer une application permettant de visionner une bibliothèque de films/saisons télévisées, de pouvoir créer des _watchlists_ et de les partager entre amis.
 
-Le projet doit être fait en équipe de 4 à 6 étudiants. L’équipe doit utiliser les dépôts GitHub fournis par les enseignants.
+Le projet doit être fait en équipe de 4 à 6 étudiants. L’équipe doit utiliser les dépôts GitHub fournis par les enseignants. L'application doit être réalisée en *anglais*.
 
 **Dates de remises:**
 
@@ -182,43 +182,67 @@ Fournir un ZIP comprenant:
 
 * La barre de menu doit être un *template* ou une *vue*
 
-* Afficher la page des listes de lectures de l’utilisateur 
+* Afficher la page des _watchlists_ de l’utilisateur 
 
-    * La page doit être dynamique (les informations de l’artiste doivent *provenir de l’API via une requête AJAX*)
+    * La page doit être dynamique (les informations des listes doivent *provenir de l’API via une requête AJAX*)
 
     * Permet de créer une nouvelle liste vide et de lui donner un nom.
 
-    * La page montre les listes de lectures de l’utilisateur.
+    * La page montre les _watchlists_ de l’utilisateur.
 
-    * Permet de modifier une liste de lecture
+    * Permet de modifier une _watchlist_
 
-        * Changer le nom de la liste de lecture
+        * Changer le nom de la _watchlist_
 
-        * Ajouter/Retirer des chansons d’une liste de lecture
+        * Ajouter/Retirer des films d’une _watchlist_
 
-        * Supprimer une liste de lecture.
+        * Supprimer une _watchlist_
 
-    * Permet de voir les chansons dans une liste de lecture (dans la même page **OU** dans une page différente)
+    * Permet de voir les films dans une _watchlist_ (dans la même page **OU** dans une page différente)
+
+    * La page doit intégrer les concepts MVC
+    
+    * NOTE : Les _watchlists_ ne s'appliquent qu'aux films, et non pas aux séries télévisées.
+
+* Afficher la page d’un acteur
+
+    * La page doit être dynamique (les informations de l'acteur doivent *provenir de l’API via une requête AJAX*)
 
     * La page doit intégrer les concepts MVC
 
-* Afficher la page d’un artiste
+* Afficher la page d’un film 
 
-    * La page doit être dynamique (les informations de l’artiste doivent *provenir de l’API via une requête AJAX*)
+    * La page doit être dynamique (les informations du film doivent *provenir de l’API via une requête AJAX*)
 
-    * La page doit intégrer les concepts MVC
+    * La page doit contenir un bouton pour ajouter le film à une _watchlist_ existante
 
-* Afficher la page d’un album 
-
-    * La page doit être dynamique (les informations de l’artiste doivent *provenir de l’API via une requête AJAX*)
-
-    * La page doit contenir un bouton pour ajouter une chanson de l’album à une liste de lecture existante
-
-    * La page doit contenir un bouton pour ajouter toutes les chansons de l’album à une liste de lecture existante
-
-    * La page permet d’écouter des extraits mp3 des chansons
+    * La page permet d’écouter l'extrait vidéo du film
 
         * La lecture se fait directement dans le navigateur sans téléchargement
+
+    * La page doit intégrer les concepts MVC
+    
+* Afficher la page d’une série télévisée 
+
+    * La page doit être dynamique (les informations de la série télévisée doivent *provenir de l’API via une requête AJAX*)
+
+    * La page permet d’écouter l'extrait vidéo de la série
+
+        * La lecture se fait directement dans le navigateur sans téléchargement
+        
+    * La page permet d'ouvrir une fenêtre modale pour chaque épisode de la série. La fenêtre modale doit comprendre les détails suivants :
+        
+        * nom de la saison
+        
+        * nom de l'épisode
+        
+        * couverture
+        
+        * preview vidéo de l'épisode
+        
+        * description
+        
+        * durée de l'épisode
 
     * La page doit intégrer les concepts MVC
 
