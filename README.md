@@ -14,7 +14,7 @@ Nous mettons à votre disposition un Gitter qui inclus les notifications de dép
 
 ## Énoncé du travail
 
-Voir l'énoncé du travail [ici](https://github.com/GLO3102/UMovie/blob/master/Enonce.md)
+Voir l'énoncé du travail [sur cette page](https://github.com/GLO3102/UMovie/blob/master/Enonce.md)
 
 ## UMovie hébergé
 
