@@ -12,6 +12,10 @@ Movie API pour le cours GLO-3102.
 
 Nous mettons à votre disposition un Gitter qui inclus les notifications de déploiement, de crash de l'API et autres informations sur le dépot GitHub. Vous pouvez poser des questions aux autres élèves sur ce chatroom.
 
+## Énoncé du travail
+
+Voir l'énoncé du travail [ici](https://github.com/GLO3102/UMovie/blob/master/Enonce.md)
+
 ## UMovie hébergé
 
 UMovie est disponible en version hébergée sur [umovie.herokuapp.com](https://umovie.herokuapp.com/).
