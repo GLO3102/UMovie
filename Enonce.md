@@ -1,6 +1,6 @@
 # Projet de session - Ubeat
 
-Le projet de session consiste à développer une application permettant de créer des listes de lectures musicales et de les partager entre amis.
+Le projet de session consiste à développer une application permettant de visionner une bibliothèque de films/saisons télévisées, de pouvoir créer des _watchlists_ et de les partager entre amis.
 
 Le projet doit être fait en équipe de 4 à 6 étudiants. L’équipe doit utiliser les dépôts GitHub fournis par les enseignants.
 
@@ -9,15 +9,15 @@ Le projet doit être fait en équipe de 4 à 6 étudiants. L’équipe doit util
 <table>
   <tr>
     <td>Livrable 1</td>
-    <td>8 février 23h55</td>
+    <td>27 septembre 23h55</td>
   </tr>
   <tr>
     <td>Livrable 2</td>
-    <td>8 mars 23h55</td>
+    <td>8 novembre 23h55</td>
   </tr>
   <tr>
     <td>Livrable 3</td>
-    <td>26 avril 23h55</td>
+    <td>13 décembre 23h55</td>
   </tr>
 </table>
 
@@ -44,7 +44,7 @@ Fournir un ZIP comprenant:
 
     * doit fonctionner sans aucune manipulation du correcteur
 
-    * doit fonctionner **sans erreurs ni exceptions** dans la console de Chrome (la correction sera fait dans Chrome, pas firefox, pas internet explorer). Si l’application n’est pas fonctionnelle et que le correcteur n’est pas en mesure de corriger, vous **risquez la note de zéro.**
+    * doit fonctionner **sans erreurs ni exceptions** dans la console de Chrome (la correction sera fait dans Chrome, pas Firefox, pas Internet Explorer). Si l’application n’est pas fonctionnelle et que le correcteur n’est pas en mesure de corriger, vous **risquez la note de zéro.**
 
 [Grille de correction disponible ici](https://docs.google.com/spreadsheets/d/1Atz9yrmn__4rpVM4wsr1xftgW42KSE4MCKMqPNsw0UQ/edit?usp=sharing)
 
@@ -56,7 +56,7 @@ Fournir un ZIP comprenant:
 
     * Lien vers la page d'accueil
 
-    * Lien vers les listes de lectures
+    * Lien vers les _watchlists_
 
     * Afficher l’utilisateur courant
 
@@ -76,19 +76,29 @@ Fournir un ZIP comprenant:
 
         * Standard : Le menu est visible par default et plus gros
 
-* Afficher la page d’un artiste (artist.html)
+* Afficher la page d’un film (movie.html)
 
-    * La page d’artiste doit comprendre le
+    * La page de film doit comprendre le
 
-        * nom d’artiste
+        * nom du film
 
         * lien vers la page itunes avec logo: [https://www.apple.com/ca/itunes/link/](https://www.apple.com/ca/itunes/link/)
 
         * genre
+        
+        * date de sortie
+        
+        * description
+        
+        * preview vidéo du film (la vidéo n'a pas besoin d'etre fonctionnelle au livrable 1).
+        
+        * couverture
+        
+        * "rating" du film (Everyone, Mature etc.)
 
-        * liste des ses albums
+        * liste des acteurs du film
 
-    * La page doit être statique (les informations de l’artiste doivent être *hardcodées*), comprendre seulement du HTML et du CSS
+    * La page doit être statique (les informations du film doivent être *hardcodées*), comprendre seulement du HTML et du CSS
 
     * La page doit être responsive
 
@@ -96,31 +106,57 @@ Fournir un ZIP comprenant:
 
             * Les images doivent s’adapter au 3 tailles d’écran
 
-            * La listes d’albums doit être flexible et s’adapter à la largeur de l’écran
+            * La listes d’acteurs doit être flexible et s’adapter à la largeur de l’écran
+            
+* Afficher la page d’une saison de série télévisée (tvshow.html)
 
-* Afficher la page d’un album (album.html)
+    * La page de série télévisée doit comprendre le
 
-    * La page d’album doit comprendre
+        * nom de la série télévisée
 
-        * nom d’artiste
+        * lien vers la page itunes avec logo: [https://www.apple.com/ca/itunes/link/](https://www.apple.com/ca/itunes/link/)
+
+        * genre
+        
+        * date de sortie
+        
+        * description
+        
+        * preview vidéo de la série (la vidéo n'a pas besoin d'etre fonctionnelle au livrable 1).
+        
+        * couverture
+
+        * liste des acteurs de la série
+        
+        * liste des épisodes de la série
+
+    * La page doit être statique (les informations de la série doivent être *hardcodées*), comprendre seulement du HTML et du CSS
+
+    * La page doit être responsive
+
+        * Supporter 3 formats d’écrans (*mobile*, *tablet* et *desktop*)
+
+            * Les images doivent s’adapter au 3 tailles d’écran
+
+            * La listes d’acteurs doit être flexible et s’adapter à la largeur de l’écran
+
+* Afficher la page d’un acteur (actor.html)
+
+    * La page d’acteur doit comprendre
+
+        * nom de l'acteur
 
         * lien pour achat sur itunes avec logo: [https://www.apple.com/ca/itunes/link/](https://www.apple.com/ca/itunes/link/)
 
-        * nom de l’album
+        * genre primaire de l'acteur
 
-        * date de sortie
+        * photo de l'acteur
 
-        * nombre de pistes
+        * liste des films (si applicable) incluant (nom, pochette, date de sortie, preview vidéo)
+        
+        * liste des saisons de séries télévisées (si applicable) incluant (nom, pochette, date de sortie, preview vidéo)
 
-        * genre
-
-        * couverture
-
-        * liste des pistes incluant (nom, durée, numéro, bouton *play*)
-
-            * Le bouton play ne doit pas jouer la musique au livrable 1
-
-    * La page doit être statique (les informations de l’artiste doivent être *hardcodées*), comprendre seulement du HTML et du CSS ou JavaScript de présentation.
+    * La page doit être statique (les informations de l’acteur doivent être *hardcodées*), comprendre seulement du HTML et du CSS ou JavaScript de présentation.
 
     * La page doit être responsive
 
@@ -128,7 +164,13 @@ Fournir un ZIP comprenant:
 
             * Les images doivent s’adapter au 3 tailles d’écran
 
-            * La liste des pistes doit être flexible et s’adapter à la largeur de l’écran
+            * Les listes de films et de saisons doivent etre flexibles et s'adapter à la taille de l'écran
+            
+* Page d'accueil de l'application
+
+    * La page d'accueil doit représenter le point d'entrée de votre application. Elle ne demande pas de fonctionnalité particulière, à vous d'être créatif!
+    
+    * La page doit etre responsive (Supporter 3 formats d'écrans).
 
 * Document design
 
