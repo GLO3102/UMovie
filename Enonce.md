@@ -1,4 +1,4 @@
-# Projet de session - Ubeat
+# Projet de session - UMovie
 
 Le projet de session consiste à développer une application permettant de visionner une bibliothèque de films/saisons télévisées, de pouvoir créer des _watchlists_ et de les partager entre amis.
 
