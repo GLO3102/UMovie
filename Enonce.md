@@ -128,7 +128,7 @@ Fournir un ZIP comprenant:
 
         * liste des acteurs de la série
         
-        * liste des épisodes de la série
+        * liste des épisodes de la série (simplement le titre et la pochette).
 
     * La page doit être statique (les informations de la série doivent être *hardcodées*), comprendre seulement du HTML et du CSS
 
@@ -229,22 +229,6 @@ Fournir un ZIP comprenant:
     * La page permet d’écouter l'extrait vidéo de la série
 
         * La lecture se fait directement dans le navigateur sans téléchargement
-        
-    * La page permet d'ouvrir une fenêtre modale pour chaque épisode de la série. La fenêtre modale doit comprendre les détails suivants :
-        
-        * nom de la saison
-        
-        * nom de l'épisode
-        
-        * couverture
-        
-        * preview vidéo de l'épisode
-        
-        * description
-        
-        * durée de l'épisode
-
-    * La page doit intégrer les concepts MVC
 
 * Tous les formulaires doivent être validés via JavaScript **avant** d’être soumis au serveur
 
@@ -261,6 +245,24 @@ Fournir un ZIP comprenant:
         * facilitez la vie du correcteur !
 
 ## Livrable 3
+
+* Afficher la page d’une série télévisée 
+        
+    * La page permet d'ouvrir une fenêtre modale pour chaque épisode de la série. La fenêtre modale doit comprendre les détails suivants :
+        
+        * nom de la saison
+        
+        * nom de l'épisode
+        
+        * couverture
+        
+        * preview vidéo de l'épisode
+        
+        * description
+        
+        * durée de l'épisode
+    
+  * La page doit permettre de chercher parmi les épisodes de la série.
 
 * Afficher la page d’enregistrement (*sign up*)
 
@@ -284,11 +286,11 @@ Fournir un ZIP comprenant:
 
     * Recherche par
 
-        * Artiste
+        * Film
 
-        * Album
+        * Saison de série télévisée
 
-        * Chanson
+        * Acteur
 
         * Utilisateur
 
@@ -296,17 +298,13 @@ Fournir un ZIP comprenant:
 
 * Page de résultats (recherche globale)
 
-    * Afficher un icône pour différencier les résultats (artiste, album, chanson, utilisateur) **OU** grouper les résulats par type
+    * Afficher un icône pour différencier les résultats (film, saison de série télévisée, acteur, utilisateur) **OU** grouper les résulats par type
 
-    * Les résultats doivent avoir des boutons pour ajouter à une liste de lecture ou, dans le cas d’un utilisateur, un bouton pour suivre celui-ci.
+    * Les résultats doivent avoir des boutons pour ajouter à une liste de lecture dans le cas d'un film ou, dans le cas d’un utilisateur, un bouton pour suivre celui-ci.
 
-    * Lien vers le résultat plus en détails (page album, page artiste, page utilisateur)
-
-* Page de résultats (recherche spécifique)
-
-    * Afficher un icône pour montrer le type de résultat (artiste, album, chanson, utilisateur)
-
-    * Afficher la couverture de la pochette d’album pour les résultats d’une recherche par album
+    * Lien vers le résultat plus en détails (page série, page film, page acteur, page utilisateur)
+    
+    * La page doit permettre de filtrer par genre. Elle doit donc lister les genres et lorsque l'usager clique sur un ou plusieurs genres, afficher seulement les films/séries correspondant à ces genres.
 
 * Afficher la page d’un utilisateur
 
@@ -331,22 +329,16 @@ Fournir un ZIP comprenant:
     * La barre de recherche offre l’autocomplétion des résultats pendant que l’utilisateur tappe au clavier
 
     * Afficher une photo de l’utilisateur avec gravatar
+    
+    * Permettre de "reviewer" un film/série et d'afficher les reviews des différents utilisateurs.
 
-    * Afficher un histogramme de la chanson en cours (animation qui suit la musique)
+    * Obtenir des suggestions d’acteurs similaires à un acteurs ou de films similaires à un film
 
-    * Obtenir d’avantages d’informations sur un artiste
+    * La page de film/série permet de trouver le film/série à meilleur prix sur des sites d’achat en ligne (Amazon, Archambault, iTunes, etc)
 
-        * Afficher une image pour l’artiste/groupe
+    * Une fonctionnalité de votre choix
 
-        * Afficher la biographie de l’artiste
-
-    * Obtenir des suggestions d’artistes similaire à un artiste ou de chansons similaires à une chanson
-
-    * La page d’album permet de trouver l’album à meilleur prix sur des sites d’achat en ligne (Amazon, Archambault, iTunes, etc)
-
-    * Une fonctionalité de votre choix
-
-        * Cette fonctionalité doit être approuvé par les 2 enseignants du cours
+        * Cette fonctionalité doit être approuvée par les 2 enseignants du cours
 
 * Document design
 
@@ -360,4 +352,4 @@ Fournir un ZIP comprenant:
 
         * facilitez la vie du correcteur !
 
-    * Expliquer vos 2 fonctionalités avancées et comment les voir en action
+    * Expliquer vos 2 fonctionnalités avancées et comment les voir en action
