@@ -3,7 +3,7 @@
 Le projet de session consiste à développer une application permettant de visionner une bibliothèque de films/saisons télévisées, de pouvoir créer des _watchlists_ et de les partager entre amis.
 
 Le projet doit être fait en équipe de 4 à 6 étudiants. L’équipe doit utiliser les dépôts GitHub fournis par les enseignants. L'application doit être réalisée en *anglais*.
-
+l
 **Dates de remises:**
 
 <table>
@@ -300,7 +300,7 @@ Fournir un ZIP comprenant:
 
     * Afficher un icône pour différencier les résultats (film, saison de série télévisée, acteur, utilisateur) **OU** grouper les résulats par type
 
-    * Les résultats doivent avoir des boutons pour ajouter à une liste de lecture dans le cas d'un film ou, dans le cas d’un utilisateur, un bouton pour suivre celui-ci.
+    * Les résultats doivent avoir des boutons pour ajouter à une watchlist dans le cas d'un film ou, dans le cas d’un utilisateur, un bouton pour suivre celui-ci.
 
     * Lien vers le résultat plus en détails (page série, page film, page acteur, page utilisateur)
     
@@ -312,7 +312,7 @@ Fournir un ZIP comprenant:
 
     * Afficher le nom et le courriel de l’utilisateur
 
-    * Afficher une liste des listes de lectures de cet utilisateur
+    * Afficher une liste des watchlists de cet utilisateur
 
     * Offrir un bouton suivre et arrêter de suivre pour ajouter ou supprimer cet utilisateur de votre liste d’amis.
 
