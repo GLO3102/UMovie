@@ -146,8 +146,6 @@ Fournir un ZIP comprenant:
 
         * liste des films (si applicable) incluant (nom, pochette, date de sortie, preview vidéo)
         
-        * liste des saisons de séries télévisées (si applicable) incluant (nom, pochette, date de sortie, preview vidéo)
-
     * La page doit être statique (les informations de l’acteur doivent être *hardcodées*), comprendre seulement du HTML et du CSS ou JavaScript de présentation.
 
     * La page doit être responsive
