@@ -96,8 +96,6 @@ Fournir un ZIP comprenant:
         
         * "rating" du film (Everyone, Mature etc.)
 
-        * liste des acteurs du film
-
     * La page doit être statique (les informations du film doivent être *hardcodées*), comprendre seulement du HTML et du CSS
 
     * La page doit être responsive
@@ -105,8 +103,6 @@ Fournir un ZIP comprenant:
         * Supporter 3 formats d’écrans (*mobile*, *tablet* et *desktop*)
 
             * Les images doivent s’adapter au 3 tailles d’écran
-
-            * La listes d’acteurs doit être flexible et s’adapter à la largeur de l’écran
             
 * Afficher la page d’une saison de série télévisée (tvshow.html)
 
@@ -125,8 +121,6 @@ Fournir un ZIP comprenant:
         * preview vidéo de la série (la vidéo n'a pas besoin d'etre fonctionnelle au livrable 1).
         
         * couverture
-
-        * liste des acteurs de la série
         
         * liste des épisodes de la série (simplement le titre et la pochette).
 
@@ -137,8 +131,6 @@ Fournir un ZIP comprenant:
         * Supporter 3 formats d’écrans (*mobile*, *tablet* et *desktop*)
 
             * Les images doivent s’adapter au 3 tailles d’écran
-
-            * La listes d’acteurs doit être flexible et s’adapter à la largeur de l’écran
 
 * Afficher la page d’un acteur (actor.html)
 
