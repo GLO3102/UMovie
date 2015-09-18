@@ -21,6 +21,7 @@ l
   </tr>
 </table>
 
+**NOTE** : Pour les previews vidéo, vous devrez utiliser l'API de Youtube puisque le format renvoyé par iTunes n'est pas lisible. Voir [ici](https://developers.google.com/youtube/v3/code_samples/javascript#search_by_keyword). Utilisez simplement le premier résultat de recherche.
 
 **Pour chaque livrable**
 
