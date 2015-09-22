@@ -73,7 +73,7 @@ Fournir un ZIP comprenant:
 
         * Mobile : Le menu peut être masqué/affichée avec du JavaScript et est masqué par défault
 
-        * Tablette : Le menu est plus petit et laisse plus de place aux pages artiste et album
+        * Tablette : Le menu est plus petit et laisse plus de place aux pages (telles que movie, actor etc.)
 
         * Standard : Le menu est visible par default et plus gros
 
