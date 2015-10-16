@@ -87,7 +87,7 @@ exports.getWatchlistById = function (req, res) {
 };
 
 exports.removeMovieFromWatchlist = function (req, res) {
-    Watchlist.findById(req.params.watchlistId, function (err, watchlist) {
+    Watchlist.findById(req.params.id, function (err, watchlist) {
         if (!err) {
             if (watchlist) {
                 var movieToRemove = watchlist.movies.filter(function (movie) {
