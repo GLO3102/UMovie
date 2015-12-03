@@ -24,6 +24,10 @@ userSchema.methods.toDTO = function (following) {
 
     if (following) {
         dto.following = obj.following;
+        dto.following.forEach(function (followedUser) {
+            followedUser.id = followedUser._id;
+            delete followedUser._id;
+        });
     }
 
     return dto;
