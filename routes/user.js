@@ -83,7 +83,9 @@ exports.follow = function (req, res) {
     User.findById(req.body.id, function (err, userToFollow) {
         if (!err) {
             if (!req.user.isFollowingUser(userToFollow.id)) {
-                req.user.following.push(userToFollow.toDTO(false));
+                var userData = userToFollow.toDTO(false);
+                userData.id = userToFollow.id;
+                req.user.following.push(userData);
                 req.user.save(function (err) {
                     if (!err) {
                         res.status(201).send(req.user.toDTO(true));
