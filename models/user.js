@@ -18,6 +18,8 @@ userSchema.methods.toDTO = function (following) {
 
     var dto = {
         id: obj.id.toString(),
+        // Kept for compatibility with bug. (To remove next session)
+        _id: obj.id.toString(),
         name: obj.name,
         email: obj.email
     };
