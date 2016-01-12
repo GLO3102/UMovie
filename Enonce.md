@@ -4,22 +4,8 @@ Le projet de session consiste à développer une application permettant de visio
 
 Le projet doit être fait en équipe de 4 à 6 étudiants. L’équipe doit utiliser les dépôts GitHub fournis par les enseignants. L'application doit être réalisée en *anglais*.
 l
-**Dates de remises:**
 
-<table>
-  <tr>
-    <td>Livrable 1</td>
-    <td>27 septembre 23h55</td>
-  </tr>
-  <tr>
-    <td>Livrable 2</td>
-    <td>8 novembre 23h55</td>
-  </tr>
-  <tr>
-    <td>Livrable 3</td>
-    <td>13 décembre 23h55</td>
-  </tr>
-</table>
+Voir dates de remise sur le portail des cours.
 
 **NOTE** : Pour les previews vidéo, vous devrez utiliser l'API de Youtube puisque le format renvoyé par iTunes n'est pas lisible. Voir [ici](https://developers.google.com/youtube/v3/code_samples/javascript#search_by_keyword). Utilisez simplement le premier résultat de recherche.
 
