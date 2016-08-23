@@ -18,7 +18,7 @@ Voir l'énoncé du travail [sur cette page](https://github.com/GLO3102/UMovie/bl
 
 ## UMovie hébergé
 
-UMovie est disponible en version hébergée sur [umovie.herokuapp.com](https://umovie.herokuapp.com/).
+UMovie est disponible en version hébergée sur [umovie.herokuapp.com](https://umovie.herokuapp.com/). Si vous obtenez un "Cannot GET /", tout va bien, aucune route n'est implémentée au root...
 
 ## Avant d'envoyer un mail de panique : 
 Est-ce que l'API est _down_ ? : Voir le [statut ici](http://uptime.statuscake.com/?TestID=58ArsNGh0S).
