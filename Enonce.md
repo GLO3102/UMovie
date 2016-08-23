@@ -3,7 +3,6 @@
 Le projet de session consiste à développer une application permettant de visionner une bibliothèque de films/saisons télévisées, de pouvoir créer des _watchlists_ et de les partager entre amis.
 
 Le projet doit être fait en équipe de 4 à 6 étudiants. L’équipe doit utiliser les dépôts GitHub fournis par les enseignants. L'application doit être réalisée en *anglais*.
-l
 
 Voir dates de remise sur le portail des cours.
 
