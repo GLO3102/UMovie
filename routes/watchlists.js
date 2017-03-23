@@ -16,7 +16,7 @@ exports.addMovieToWatchlist = function (req, res) {
                     } else {
                         res.status(412).send({
                             errorCode: 'NOT_WATCHLIST_OWNER',
-                            message: 'Watchlist can only be deleted by its owner.'
+                            message: 'Watchlist can only be edited by its owner.'
                         });
                     }
                 } else {
