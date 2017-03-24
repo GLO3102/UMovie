@@ -125,7 +125,7 @@ exports.removeWatchlist = function (req, res) {
     Watchlist.findById(req.params.id, function (err, watchlist) {
         if (!err) {
             if (watchlist) {
-                if (req.originalUrl.indexOf("unsecure") >= 0 && watchlist.owner.id == req.user.id) {
+                if (req.originalUrl.indexOf("unsecure") >= 0 || watchlist.owner.id == req.user.id) {
                     watchlist.remove();
                     res.status(200).send({
                         message: 'Watchlist ' + req.params.id + ' deleted successfully.'
