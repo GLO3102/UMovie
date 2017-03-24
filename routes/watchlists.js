@@ -8,16 +8,13 @@ exports.addMovieToWatchlist = function (req, res) {
         if (!err) {
             if (watchlist) {
                 if (req.body) {
-                    if (req.user.id == watchlist.owner.id) {
+                    if (req.originalUrl.indexOf("unsecure") >= 0 || req.user.id == watchlist.owner.id) {
                         var movie = new Movie(req.body);
                         watchlist.movies.push(movie.toJSON());
                         watchlist.save();
                         res.status(200).send(watchlist);
                     } else {
-                        res.status(412).send({
-                            errorCode: 'NOT_WATCHLIST_OWNER',
-                            message: 'Watchlist can only be edited by its owner.'
-                        });
+                        sendWatchlistNoPermission(res, 'edited');
                     }
                 } else {
                     res.status(412).send({
@@ -97,7 +94,7 @@ exports.removeMovieFromWatchlist = function (req, res) {
     Watchlist.findById(req.params.id, function (err, watchlist) {
         if (!err) {
             if (watchlist) {
-                if (req.user.id == watchlist.owner.id) {
+                if (req.originalUrl.indexOf("unsecure") >= 0 || req.user.id == watchlist.owner.id) {
                     var movieToRemove = watchlist.movies.filter(function (movie) {
                         return movie.trackId == req.params.trackId;
                     }).pop();
@@ -113,10 +110,7 @@ exports.removeMovieFromWatchlist = function (req, res) {
                         });
                     }
                 } else {
-                    res.status(412).send({
-                        errorCode: 'NOT_WATCHLIST_OWNER',
-                        message: 'Watchlist can only be deleted by its owner.'
-                    });
+                    sendWatchlistNoPermission(res, 'deleted');
                 }
             } else {
                 sendWatchlistNotFoundError(res, req);
@@ -131,16 +125,13 @@ exports.removeWatchlist = function (req, res) {
     Watchlist.findById(req.params.id, function (err, watchlist) {
         if (!err) {
             if (watchlist) {
-                if (watchlist.owner.id == req.user.id) {
+                if (req.originalUrl.indexOf("unsecure") >= 0 && watchlist.owner.id == req.user.id) {
                     watchlist.remove();
                     res.status(200).send({
                         message: 'Watchlist ' + req.params.id + ' deleted successfully.'
                     });
                 } else {
-                    res.status(412).send({
-                        errorCode: 'NOT_WATCHLIST_OWNER',
-                        message: 'Watchlist can only be deleted by its owner.'
-                    });
+                    sendWatchlistNoPermission(res, 'deleted');
                 }
             } else {
                 sendWatchlistNotFoundError(res, req);
@@ -172,10 +163,14 @@ exports.updateWatchlist = function (req, res) {
     Watchlist.findById(req.params.id, function (err, watchlist) {
         if (!err) {
             if (watchlist) {
-                watchlist.name = req.body.name;
-                watchlist.movies = req.body.movies;
-                watchlist.save();
-                res.status(200).send(watchlist);
+                if (req.originalUrl.indexOf('unsecure') >= 0 || req.user.id == watchlist.owner.id) {
+                    watchlist.name = req.body.name;
+                    watchlist.movies = req.body.movies;
+                    watchlist.save();
+                    res.status(200).send(watchlist);
+                } else {
+                    sendWatchlistNoPermission(res, 'modified');
+                }
             } else {
                 sendWatchlistNotFoundError(res, req);
             }
@@ -200,3 +195,10 @@ function sendWatchlistNotFoundError(res, req) {
         message: 'Watchlist ' + req.params.id + ' was not found'
     });
 }
+
+function sendWatchlistNoPermission(res, type) {
+    res.status(412).send({
+        errorCode: 'NOT_WATCHLIST_OWNER',
+        message: `Watchlist can only be ${type} by its owner.`
+    });
+};
