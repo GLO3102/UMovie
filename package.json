@@ -4,7 +4,7 @@
   "description": "A REST API for the GLO-3102 class project UMovie",
   "main": "index.js",
   "dependencies": {
-    "cors": "~2.7.1",
+    "cors": "~2.8.1",
     "ejs": "~2.3.2",
     "express": "~4.13.0",
     "gravatar": "~1.1.1",
