@@ -80,6 +80,13 @@ exports.findByName = function (req, res) {
 };
 
 exports.follow = function (req, res) {
+    if (typeof req.body === 'undefined' || typeof req.body.id === 'undefined') {
+            res.status(400).send({
+                errorCode: 'REQUEST_BODY_REQUIRED',
+                message: 'Request body is missing'
+            });
+            return;
+    }
     User.findById(req.body.id, function (err, userToFollow) {
         if (!err) {
             if (!req.user.isFollowingUser(userToFollow.id)) {
