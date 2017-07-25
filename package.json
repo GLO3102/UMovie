@@ -19,7 +19,7 @@
     "node-deezer": "~0.3.3",
     "request": "~2.58.0",
     "underscore": "~1.8.3",
-    "moment": "~2.10.3",
+    "moment": "~2.16.0",
     "jwt-simple": "~0.3.0",
     "bcrypt-nodejs": "0.0.3",
     "connect-flash": "~0.1.1"
