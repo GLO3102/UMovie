@@ -27,7 +27,7 @@
   "devDependencies": {
     "gulp": "~3.9.0",
     "gulp-symlink": "~2.1.1",
-    "gulp-util": "~3.0.6",
+    "gulp-util": "~3.0.8",
     "run-sequence": "~1.1.1"
   },
   "scripts": {
